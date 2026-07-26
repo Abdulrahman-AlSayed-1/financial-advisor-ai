@@ -1,4 +1,4 @@
-# 💼 Financial Advisor AI
+# Financial Advisor AI
 
 > An AI-powered financial document assistant built with **Spring Boot**, **Spring AI**, **PostgreSQL**, **PGVector**, and **Ollama** using **Retrieval-Augmented Generation (RAG)**.
 
@@ -11,7 +11,7 @@
 
 ---
 
-# 📖 Overview
+# Overview
 
 Financial Advisor AI is a Retrieval-Augmented Generation (RAG) application that enables users to interact with financial documents using natural language.
 
@@ -21,7 +21,7 @@ This project demonstrates how modern AI applications combine **Large Language Mo
 
 ---
 
-# ✨ Features
+# Features
 
 - 📄 PDF document ingestion
 - ✂️ Automatic document chunking
@@ -35,7 +35,7 @@ This project demonstrates how modern AI applications combine **Large Language Mo
 
 ---
 
-# 🏗️ Architecture
+# Architecture
 
 ```text
                 +------------------+
@@ -109,7 +109,7 @@ This project demonstrates how modern AI applications combine **Large Language Mo
 
 ---
 
-# 🛠️ Tech Stack
+# Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
@@ -123,7 +123,7 @@ This project demonstrates how modern AI applications combine **Large Language Mo
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```text
 src
@@ -137,7 +137,7 @@ src
 
 ---
 
-# 🚀 Getting Started
+# Getting Started
 
 ## Prerequisites
 
@@ -187,7 +187,7 @@ ollama run llama3
 
 ---
 
-# 💬 Example Request
+# Example Request
 
 ```http
 GET /chat?prompt=What is the main topic of the document?
@@ -214,7 +214,7 @@ and investment strategies.
 
 ---
 
-# 🚧 Roadmap
+# Roadmap
 
 - [ ] Multi-document support
 - [ ] Source citations
@@ -231,20 +231,8 @@ and investment strategies.
 
 ---
 
-# 🤝 Contributing
-
-Contributions, suggestions, and feature requests are welcome.
-
-Feel free to fork the repository and open a pull request.
-
----
-
 # 👨‍💻 Author
 
 **Abdulrahman AlSayed**
 
 - GitHub: https://github.com/Abdulrahman-AlSayed-1
-
----
-
-⭐ If you find this project useful or interesting, consider giving it a star.
