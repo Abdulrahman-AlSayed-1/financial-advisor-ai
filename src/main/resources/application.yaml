@@ -1,0 +1,19 @@
+ spring:
+  application:
+    name: financial-advisor-ai
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: qwen:latest
+      embedding:
+        options:
+          model: nomic-embed-text
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+# ---------------------
+ logging:
+   level:
+     org.apache.pdfbox.pdmodel.font.FileSystemFontProvider: ERROR
