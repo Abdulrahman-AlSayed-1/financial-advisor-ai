@@ -66,7 +66,7 @@ This project demonstrates how modern AI applications combine **Large Language Mo
 
 ---
 
-# 🔄 RAG Workflow
+# RAG Workflow
 
 ```text
               PDF Document
@@ -203,7 +203,7 @@ and investment strategies.
 
 ---
 
-# 📌 Current Capabilities
+# Current Capabilities
 
 - Upload and process financial documents
 - Generate vector embeddings
@@ -231,8 +231,8 @@ and investment strategies.
 
 ---
 
-# 👨‍💻 Author
+# Author
 
-**Abdulrahman AlSayed**
+**Abdulrahman Al-Sayed**
 
 - GitHub: https://github.com/Abdulrahman-AlSayed-1
