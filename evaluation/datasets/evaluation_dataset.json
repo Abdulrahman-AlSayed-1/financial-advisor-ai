@@ -1,0 +1,223 @@
+[
+  {
+    "source_context": "While broad measures such as the employment to population ratio (LHS) continue to show tightness in the labor market, they may not be capturing the impact of immigration. Border encounters in the Southwest (RHS) have increased significantly in recent years. As such, the \"true\" unemployment rate may be higher than the widely reported figures.",
+    "source_section": "Unemployment May Be Higher than Reported",
+    "source_page": 7,
+    "content_type": "paragraph",
+    "question": "Why might the true unemployment rate be higher than the widely reported figures?",
+    "ground_truth": "The report suggests that broad employment measures may not be capturing the impact of increased immigration. As a result, the true unemployment rate may be higher than the widely reported figures.",
+    "evidence_groups": [
+      {
+        "required_terms": ["employment", "immigration"]
+      },
+      {
+        "required_terms": ["unemployment", "higher"]
+      }
+    ]
+  },
+  {
+    "source_context": "The longer-term average spread between Fed funds and the U.S. Treasury (UST) 10-year yield is 75 bps.",
+    "source_section": "Holding Underweight in Duration",
+    "source_page": 4,
+    "content_type": "paragraph",
+    "question": "What is the longer-term average spread between the Fed funds rate and the U.S. Treasury 10-year yield?",
+    "ground_truth": "The longer-term average spread between Fed funds and the U.S. Treasury 10-year yield is 75 basis points.",
+    "evidence_groups": [
+      {
+        "required_terms": ["fed funds", "10-year", "75"]
+      }
+    ]
+  },
+  {
+    "source_context": "US Loans Current 9.54 12-Mo. Ago 10.30 Average 9.97 Minimum 9.54 Maximum 10.60",
+    "source_section": "Key Rates (%)",
+    "source_page": 20,
+    "content_type": "table",
+    "question": "What was the current yield for U.S. Loans (Leveraged Loans) as of September 30, 2024?",
+    "ground_truth": "The yield for U.S. Loans was 9.54% as of September 30, 2024.",
+    "evidence_groups": [
+      {
+        "required_terms": ["us loans"]
+      },
+      {
+        "required_terms": ["current", "9.54"]
+      }
+    ]
+  },
+  {
+    "source_context": "Historically Fed rate cuts tend to come alongside weaker earnings growth as policy is reacting to weaker growth. This cutting cycle is unique in that the consensus forecasts EPS acceleration, even as the Fed cuts.",
+    "source_section": "What is unique about this cycle?",
+    "source_page": 8,
+    "content_type": "paragraph",
+    "question": "What is unique about the current Fed cutting cycle?",
+    "ground_truth": "Historically, Fed rate cuts tend to come alongside weaker earnings growth as policy responds to weaker growth. In this cutting cycle, however, consensus forecasts EPS acceleration even as the Fed cuts.",
+    "evidence_groups": [
+      {
+        "required_terms": ["fed cuts", "earnings growth"]
+      },
+      {
+        "required_terms": ["eps acceleration"]
+      }
+    ]
+  },
+  {
+    "source_context": "CCC Index Coupon (%) 7.20 Price ($) 84.5 Yield to Worst (%) 11.80 Spread (bps) 802 Duration (yrs.) 2.9 1-Mo. 5.20 3-Mo. 11.55 YTD 15.35 1Y 22.96",
+    "source_section": "Corporate Bond Market Update",
+    "source_page": 25,
+    "content_type": "table",
+    "question": "What were the YTD and 1-Year total returns for CCC Index U.S. High Yield bonds as of September 30, 2024?",
+    "ground_truth": "CCC Index U.S. High Yield bonds delivered a YTD return of 15.35% and a 1-Year total return of 22.96%.",
+    "evidence_groups": [
+      {
+        "required_terms": ["ccc index"]
+      },
+      {
+        "required_terms": ["ytd", "15.35"]
+      },
+      {
+        "required_terms": ["1y", "22.96"]
+      }
+    ]
+  },
+  {
+    "source_context": "S&P 500 Comm. Services 28.81  S&P 500 Cons Disc 13.91  S&P 500 Cons Staples 18.74  S&P 500 Energy 8.36  S&P 500 Financials 21.91  S&P 500 Health Care 14.35  S&P 500 Industrials 20.20  S&P 500 Info Tech 30.31  S&P 500 Materials 14.14  S&P 500 Real Estate 14.31  S&P 500 Utilities 30.63",
+    "source_section": "Asset Class Return Analysis (%)",
+    "source_page": 40,
+    "content_type": "table",
+    "question": "Which two S&P 500 sectors delivered the highest YTD total returns through September 30, 2024?",
+    "ground_truth": "S&P 500 Utilities had the highest YTD total return at 30.63%, followed by S&P 500 Info Tech at 30.31%.",
+    "evidence_groups": [
+      {
+        "required_terms": ["s&p 500", "sectors"]
+      },
+      {
+        "required_terms": ["ytd"]
+      }
+    ],
+    "required_evidence": [
+      {
+        "entity": "S&P 500 Utilities",
+        "metric": "YTD total return",
+        "value": "30.63%",
+        "period": "September 30, 2024"
+      },
+      {
+        "entity": "S&P 500 Info Tech",
+        "metric": "YTD total return",
+        "value": "30.31%",
+        "period": "September 30, 2024"
+      }
+    ]
+  },
+  {
+    "source_context": "S&P 500 and U.S. Aggregate: 5 Years ended September 30, 2024 = 0.55; 10 Years ended September 30, 2024 = 0.37.",
+    "source_section": "Major Asset Classes Correlation Table",
+    "source_page": 48,
+    "content_type": "table",
+    "question": "What were the 5-year and 10-year return correlations between the S&P 500 and the U.S. Aggregate Bond Index ending September 30, 2024?",
+    "ground_truth": "The correlation between the S&P 500 and U.S. Aggregate Bond Index was 0.55 over 5 years and 0.37 over 10 years.",
+    "evidence_groups": [
+      {
+        "required_terms": ["s&p 500", "u.s. aggregate"]
+      },
+      {
+        "required_terms": ["correlation"]
+      }
+    ],
+    "required_evidence": [
+      {
+        "entity": "S&P 500 and U.S. Aggregate",
+        "metric": "5-year return correlation",
+        "value": "0.55",
+        "period": "September 30, 2024"
+      },
+      {
+        "entity": "S&P 500 and U.S. Aggregate",
+        "metric": "10-year return correlation",
+        "value": "0.37",
+        "period": "September 30, 2024"
+      }
+    ]
+  },
+  {
+    "source_context": "*Transition is an asset allocation view, which refers to cash, cash equivalents or liquid short-duration assets, such as short-dated Treasuries, that can be used to \"transition\" to other asset classes.",
+    "source_section": "TOP IDEAS",
+    "source_page": 2,
+    "content_type": "paragraph",
+    "question": "What does the 'Transition' asset allocation view refer to in the report?",
+    "ground_truth": "Transition refers to cash, cash equivalents, or liquid short-duration assets (such as short-dated Treasuries) used to transition into other asset classes.",
+    "evidence_groups": [
+      {
+        "required_terms": ["transition"]
+      },
+      {
+        "required_terms": ["cash", "treasuries"]
+      }
+    ]
+  },
+  {
+    "source_context": "Annual Default Rate Current HY Corporate 0.94 Loans 0.80",
+    "source_section": "Corporate Bond Market Update",
+    "source_page": 26,
+    "content_type": "table",
+    "question": "What were the current annual default rates for High Yield Corporates and Leveraged Loans as of September 30, 2024?",
+    "ground_truth": "The annual default rate was 0.94% for High Yield Corporates and 0.80% for Leveraged Loans.",
+    "evidence_groups": [
+      {
+        "required_terms": ["high yield", "default rate"]
+      },
+      {
+        "required_terms": ["loans", "default rate"]
+      }
+    ],
+    "required_evidence": [
+      {
+        "entity": "High Yield Corporate",
+        "metric": "annual default rate",
+        "value": "0.94%",
+        "period": "current"
+      },
+      {
+        "entity": "Leveraged Loans",
+        "metric": "annual default rate",
+        "value": "0.80%",
+        "period": "current"
+      }
+    ]
+  },
+  {
+    "source_context": "After the initial round of cuts, the market is pricing for another 200 bps of Fed cuts and 150 – 200 bps from the ECB and BoE in the next two years. The BoJ is a clear outlier.",
+    "source_section": "Holding Duration Underweight",
+    "source_page": 10,
+    "content_type": "paragraph",
+    "question": "How many basis points of rate cuts are priced in over the next two years for the Fed, ECB, and BoE?",
+    "ground_truth": "Markets are pricing in another 200 bps of Fed rate cuts and 150 to 200 bps of cuts from the ECB and Bank of England over the next two years.",
+    "evidence_groups": [
+      {
+        "required_terms": ["fed", "200"]
+      },
+      {
+        "required_terms": ["ecb", "150"]
+      },
+      {
+        "required_terms": ["boe", "200"]
+      }
+    ]
+  },
+  {
+    "source_context": "Specifically, we think the Fed may be worried that the labor market - upon which their policy reaction function hinges - is weaker than the data suggests.",
+    "source_section": "Why Did the Fed Start with a 50-Basis Point Cut?",
+    "source_page": 3,
+    "content_type": "paragraph",
+    "question": "What primary labor market concern might explain why the Fed initiated rate cuts with a 50-basis point reduction?",
+    "ground_truth": "The Fed may be concerned that the labor market, which drives its policy reaction function, is actually weaker than current official data suggests.",
+    "evidence_groups": [
+      {
+        "required_terms": ["labor market", "weaker"]
+      },
+      {
+        "required_terms": ["fed", "policy"]
+      }
+    ]
+  }
+]

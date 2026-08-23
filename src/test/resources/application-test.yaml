@@ -1,0 +1,47 @@
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiChatAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiEmbeddingAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiAudioSpeechAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiAudioTranscriptionAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiImageAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiModerationAutoConfiguration
+      - org.springframework.ai.model.google.genai.autoconfigure.GoogleGenAiAutoConfiguration
+      - org.springframework.ai.model.google.genai.autoconfigure.chat.GoogleGenAiChatAutoConfiguration
+      - org.springframework.ai.model.chat.client.autoconfigure.ChatClientAutoConfiguration
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: qwen:latest
+          format: json
+          num_ctx: 16384
+          num_predict: 1024
+          temperature: 0.2
+      embedding:
+        options:
+          model: nomic-embed-text
+  datasource:
+    url: jdbc:postgresql://localhost:5432/markets
+    username: user
+    password: password
+  mvc:
+    async:
+      request-timeout: 300000
+
+app:
+  ingestion:
+    force: false
+    pipeline: pymupdf
+    extractor-mode: file
+  vision:
+    enabled: false
+  evaluation:
+    skip-evaluators: true
+  rag:
+    search:
+      hybrid:
+        enabled: true

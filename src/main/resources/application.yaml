@@ -1,19 +1,112 @@
- spring:
+spring:
   application:
     name: financial-advisor-ai
+  autoconfigure:
+    exclude:
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiChatAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiEmbeddingAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiAudioSpeechAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiAudioTranscriptionAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiImageAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiModerationAutoConfiguration
+      - org.springframework.ai.model.google.genai.autoconfigure.chat.GoogleGenAiChatAutoConfiguration
+      - org.springframework.ai.model.chat.client.autoconfigure.ChatClientAutoConfiguration
   ai:
     ollama:
       base-url: http://localhost:11434
-      chat:
-        options:
-          model: qwen:latest
       embedding:
         options:
           model: nomic-embed-text
+      chat:
+        options:
+          model: qwen:latest
+          temperature: 0.2
+          num-ctx: 8192
+          num-thread: 8
+    google:
+      genai:
+        api-key: ${GOOGLE_GENAI_API_KEY:${GOOGLE_GEMINI_API_KEY:${GEMINI_API_KEY:}}}
+        vertex-ai: false
+        chat:
+          options:
+            model: ${GEMINI_MODEL:gemini-2.5-flash}
+            temperature: 0.2
     vectorstore:
       pgvector:
         initialize-schema: true
-# ---------------------
- logging:
-   level:
-     org.apache.pdfbox.pdmodel.font.FileSystemFontProvider: ERROR
+    retry:
+      max-attempts: 5
+      backoff:
+        initial-interval: 2000
+        multiplier: 2
+        max-interval: 10000
+  mvc:
+    async:
+      request-timeout: 300000
+app:
+  chat:
+    provider: ollama # 'gemini' | 'ollama'
+    model: qwen:latest
+  ingestion:
+    force: false
+    pipeline: pymupdf
+    batch-size: 50
+    extractor-mode: file
+    pymupdf:
+      json-resource: classpath:/docs/pymupdf_extraction.json
+    extraction:
+      images-dir: src/main/resources/docs/extraction_output
+  chunking:
+    target-chars: 3000
+    min-chars: 80
+    figure:
+      # Max total datapoints across all panels before switching to panel-summary-only mode.
+      # Below this threshold, individual datapoint chunks are ALSO created (3-tier).
+      # Above this threshold, only figure summary + panel summaries are created (2-tier).
+      max-datapoint-chunks: 30
+      always-create-summary: true
+      always-create-panel-summaries: true
+    table:
+      # Rows per group chunk for large tables.
+      row-group-size: 15
+      # Tables with <= this many rows get individual row chunks (more precise).
+      small-table-threshold: 20
+      # Soft token budget per chunk (chars). Group is split further if exceeded.
+      max-chars-per-chunk: 1200
+      always-create-summary: true
+  vision:
+    enabled: true
+    provider: gemini # 'gemini' | 'ollama'
+    model: ${GEMINI_MODEL:gemini-2.5-flash}
+    cache:
+      enabled: true
+      directory: .vision-cache
+    retry:
+      max-attempts: 3
+      backoff-ms: 2000
+    timeout-seconds: 60
+  evaluation:
+    skip-evaluators: false
+    evaluator-chunk-limit: 10
+    throttle-ms: 3000
+    metric-throttle-ms: 1500
+    # Selective evaluator mode: run only essential metrics to reduce LLM calls
+    # Options: all, retrieval-only, generation-only, minimal
+    evaluator-mode: all
+  rag:
+    search:
+      top-k: 15
+      similarity-threshold: 0.30
+      hybrid:
+        enabled: true
+        lexical-weight: 0.3
+        vector-weight: 0.7
+
+logging:
+  level:
+    org.apache.pdfbox.pdmodel.font.FileSystemFontProvider: ERROR
+    org.springframework.ai.openai: DEBUG
+    org.springframework.web.client.RestClient: DEBUG
+    com.alsayed.financial_advisor_ai.chunking: DEBUG
+    com.alsayed.financial_advisor_ai.chunking.SpatialFigureParser: DEBUG

@@ -48,3 +48,22 @@ application-local.properties
 application-local.yml
 application-prod.properties
 application-prod.yml
+
+### App Generated & Debug ###
+debug/
+.vision-cache/
+src/main/resources/docs/extraction_output/
+evaluation/reports/
+article_thebeatoct2024.md
+DOC_DIAGNOSTIC_REPORT.md
+src/main/resources/docs/pymupdf_extraction.json
+src/main/resources/docs/structured_tables.json
+src/main/resources/docs/tables_structured.json
+src/main/resources/docs/article_thebeatoct2024.txt
+extracted_text_samples.txt
+forensic_dump.txt
+prompt_dump.txt
+llama_*.txt
+retrieval_*.txt
+tmp.json
+DumpSignals.java

@@ -1,0 +1,275 @@
+[
+  {
+    "source_context": "Malaysian Ringgit (MYR) Spot Returns vs. USD (%) 1-Mo. 4.83 YTD 11.43 1Y 13.87",
+    "source_section": "ALTERNATIVES",
+    "source_page": 43,
+    "question": "What was the YTD spot return of the Malaysian Ringgit (MYR) against the U.S. Dollar as of September 30, 2024?",
+    "ground_truth": "The Malaysian Ringgit gained 11.43% YTD against the U.S. Dollar."
+  },
+  {
+    "source_context": "Hospital Total Returns (%) YTD 11.72 1Y 20.98 Tobacco Total Returns (%) YTD 1.75 1Y 18.97",
+    "source_section": "BONDS",
+    "source_page": 27,
+    "question": "What were the 1-Year total returns for Hospital and Tobacco sectors within the Bloomberg High Yield Municipal Bond Index as of September 30, 2024?",
+    "ground_truth": "The 1-Year total return was 20.98% for Hospital municipal bonds and 18.97% for Tobacco municipal bonds."
+  },
+  {
+    "source_context": "Utilities Expected EPS Growth 39.89 2023 EPS Growth -20.62",
+    "source_section": "EQUITIES",
+    "source_page": 35,
+    "question": "What is the expected calendar year EPS growth for the S&P 500 Utilities sector following a -20.62% growth rate in 2023?",
+    "ground_truth": "Expected EPS growth for the S&P 500 Utilities sector is 39.89%."
+  },
+  {
+    "source_context": "Private infrastructure is benefiting from the tailwinds of several mega trends, including the digitization of society and economies, and the energy transition.",
+    "source_section": "TOP IDEAS",
+    "source_page": 18,
+    "question": "Which mega trends are currently providing tailwinds for private infrastructure investments?",
+    "ground_truth": "Private infrastructure benefits from the digitization of society and economies as well as the energy transition."
+  },
+  {
+    "source_context": "Turkish New Lira (TRY) Local Interest Rates % (1 Year) Current 40.42 1 Yr Prior 24.71",
+    "source_section": "ALTERNATIVES",
+    "source_page": 45,
+    "question": "What was the 1-year emerging market local interest rate for the Turkish New Lira (TRY) as of September 30, 2024?",
+    "ground_truth": "The 1-year emerging market local interest rate for the Turkish New Lira was 40.42%."
+  },
+  {
+    "source_context": "1-Year Returns Large Cap Value 27.76 Large Cap Growth 42.19",
+    "source_section": "EQUITIES",
+    "source_page": 31,
+    "question": "What were the 1-year total returns for Large Cap Growth and Large Cap Value stocks as of September 30, 2024?",
+    "ground_truth": "Large Cap Growth returned 42.19% over 1 year, while Large Cap Value returned 27.76%."
+  },
+  {
+    "source_context": "The window for small cap outperformance is narrow – requiring “Goldilocks” growth and inflation",
+    "source_section": "TOP IDEAS",
+    "source_page": 17,
+    "question": "What macro conditions are required for small-cap equities to outperform large caps?",
+    "ground_truth": "Small-cap equity outperformance requires a narrow 'Goldilocks' environment of optimal growth and inflation."
+  },
+  {
+    "source_context": "The strengthening JPY (yen) is a risk for Japanese equities, but the risk looks properly priced as Japan has derated and is now trading at a 20% discount vs global equities. We maintain OW, as we think the JPY will strengthen, but at a gradual pace, while structural improvements remain on track.",
+    "source_section": "TOP IDEAS",
+    "source_page": 17,
+    "question": "What is the team's allocation stance on Japanese equities and why?",
+    "ground_truth": "The team maintains an Overweight stance because Japanese equities trade at a 20% discount to global equities, JPY strengthening is expected to be gradual, and structural improvements remain on track."
+  },
+  {
+    "source_context": "Gold 1Y 41.70 Silver 1Y 39.33",
+    "source_section": "ALTERNATIVES",
+    "source_page": 46,
+    "question": "What were the 1-year total returns for Gold and Silver precious metals as of September 30, 2024?",
+    "ground_truth": "Gold returned 41.70% and Silver returned 39.33% over the 1-year period."
+  },
+  {
+    "source_context": "AAA Muni-to-Treasury Yield Ratios Current: 5Y 66 10Y 69 30Y 86",
+    "source_section": "BONDS",
+    "source_page": 28,
+    "question": "What were the AAA Municipal-to-Treasury yield ratios for 5-year, 10-year, and 30-year maturities as of September 30, 2024?",
+    "ground_truth": "The AAA Muni-to-Treasury yield ratios were 66% for 5-year, 69% for 10-year, and 86% for 30-year maturities."
+  },
+  {
+    "source_context": "In periods where the Fed cut rates and no recession materialized, the average S&P 500 return was 21%.",
+    "source_section": "TOP IDEAS",
+    "source_page": 8,
+    "question": "What has been the average S&P 500 return following a Fed rate cut during non-recessionary cycles?",
+    "ground_truth": "In historical periods where the Fed cut interest rates and no recession occurred, the average S&P 500 return was 21%."
+  },
+  {
+    "source_context": "Our previous downgrade of Munis appears to have been well timed as the asset class has cheapened relative to USTs. We now believe Munis offer compelling value for taxable investors.",
+    "source_section": "TOP IDEAS",
+    "source_page": 16,
+    "question": "What is the view on Municipal Bonds for taxable investors following recent market movements?",
+    "ground_truth": "Municipal bonds have cheapened relative to U.S. Treasuries and now offer compelling value for taxable investors."
+  },
+  {
+    "source_context": "The Supreme Court’s recent Chevron ruling may have more impact in regulation than anything the President does.",
+    "source_section": "TOP IDEAS",
+    "source_page": 6,
+    "question": "What is noted regarding the potential impact of the Supreme Court's Chevron ruling relative to presidential actions?",
+    "ground_truth": "The Supreme Court's Chevron ruling may have a greater overall impact on regulation than any executive action taken by the President."
+  },
+  {
+    "source_context": "Bloomberg U.S. Aggregate Index Coupon (%) 3.37 Price ($) 94.0 Yield to Worst (%) 4.23 Spread (bps) 36 Maturity (yrs.) 8.4 Duration (yrs.) 6.2 1-Mo. 1.34 3-Mo. 5.20 YTD 4.45 1Y 11.57",
+    "source_section": "BONDS",
+    "source_page": 23,
+    "question": "What was the duration and YTD total return of the Bloomberg U.S. Aggregate Index as of September 30, 2024?",
+    "ground_truth": "The Bloomberg U.S. Aggregate Index had a duration of 6.2 years and a YTD total return of 4.45%."
+  },
+  {
+    "source_context": "Academic analysis reveals her voting record in the Senate as very progressive and far left, according to Voteview.com. But she promises to govern as a moderate.",
+    "source_section": "TOP IDEAS",
+    "source_page": 3,
+    "question": "How does Voteview.com characterize Vice President Kamala Harris's Senate voting record compared to her governing promises?",
+    "ground_truth": "Voteview.com scores her Senate voting record as very progressive and far left, though she promises to govern as a moderate."
+  },
+  {
+    "source_context": "JPMorgan Emerging Markets Bond Index (EMBI) Global Diversified Current Avg. Spread (bps) 361 JPMorgan Government Bond Index-Emerging Markets (GBI-EM) Global Diversified Current Avg. Yield (%) 6.11",
+    "source_section": "BONDS",
+    "source_page": 29,
+    "question": "What were the current average spread for hard currency sovereign EMD and average yield for local currency EMD as of September 30, 2024?",
+    "ground_truth": "The hard currency sovereign EMD (EMBI Global Diversified) spread was 361 bps, while the local currency EMD (GBI-EM Global Diversified) yield was 6.11%."
+  },
+  {
+    "source_context": "Top 10 Exchange-Traded Fund Categories by Monthly Flows ($MM) Large Blend 1 Mo. 18,151 3 Mo. 71,554 12 Mo. 294,358",
+    "source_section": "TRANSITION",
+    "source_page": 49,
+    "question": "Which Exchange-Traded Fund category recorded the highest monthly inflows as of August 31, 2024?",
+    "ground_truth": "Large Blend recorded the highest monthly ETF inflows at $18,151 million."
+  },
+  {
+    "source_context": "Central Bank Policy Rates Current: U.S. Federal Reserve 5.00% BOE 5.00% BOJ 0.25% ECB 3.65%",
+    "source_section": "BONDS",
+    "source_page": 21,
+    "question": "What were the central bank policy rates for the U.S. Federal Reserve, BOE, ECB, and BOJ as of September 30, 2024?",
+    "ground_truth": "As of September 30, 2024, policy rates were 5.00% for the U.S. Fed, 5.00% for the BOE, 3.65% for the ECB, and 0.25% for the BOJ."
+  },
+  {
+    "source_context": "Yield differentials have largely explained the U.S. dollar’s (USD) path since the beginning of the 2022 rate-hiking cycle.",
+    "source_section": "TOP IDEAS",
+    "source_page": 9,
+    "question": "What factor has primarily driven the U.S. dollar's path since the start of the 2022 rate-hiking cycle?",
+    "ground_truth": "Yield differentials have largely explained the U.S. dollar's movement since the beginning of the 2022 rate-hiking cycle."
+  },
+  {
+    "source_context": "If we look at other central banks, e.g., the Bank of England, ECB and others, they started cutting rates but then had to slow their planned pace of cuts because inflation proved more stubborn, and the labor market/wages remained sticky stronger.",
+    "source_section": "TOP IDEAS",
+    "source_page": 3,
+    "question": "Why might planned Fed rate cuts encounter challenges according to lessons from other global central banks?",
+    "ground_truth": "Other central banks like the Bank of England and ECB had to slow rate cuts because inflation proved stubborn and wage/labor market data remained stickier and stronger than anticipated."
+  },
+  {
+    "source_context": "Given that we think duration has become a more key element to returns, we prefer to upgrade short duration Investment Grade (IG) with proceeds from reducing HY.",
+    "source_section": "TOP IDEAS",
+    "source_page": 4,
+    "question": "How is the Portfolio Solutions Group reallocating capital reduced from High Yield?",
+    "ground_truth": "Proceeds from reducing High Yield (from Overweight to Neutral) are being used to upgrade short duration Investment Grade credit."
+  },
+  {
+    "source_context": "Current Yields: S&P 500 1.22% MSCI World 1.77% MSCI EM 2.52% MSCI EAFE 2.99% 10 Yr Treasury 3.79%",
+    "source_section": "EQUITIES",
+    "source_page": 32,
+    "question": "What were the dividend yields for the S&P 500, MSCI EAFE, and MSCI Emerging Markets as of September 30, 2024?",
+    "ground_truth": "The dividend yields were 1.22% for the S&P 500, 2.99% for MSCI EAFE, and 2.52% for MSCI Emerging Markets."
+  },
+  {
+    "source_context": "Spread on 12/31/23 339 Spread history measures past 10 years... High Yield Current 303",
+    "source_section": "BONDS",
+    "source_page": 24,
+    "question": "What was the option-adjusted spread for U.S. High Yield on September 30, 2024, compared to year-end 2023?",
+    "ground_truth": "The U.S. High Yield option-adjusted spread was 303 basis points on September 30, 2024, compared to 339 basis points on December 31, 2023."
+  },
+  {
+    "source_context": "October represents peak uncertainty. Markets have been wrestling with the start of Fed rate cuts and the U.S. election outcomes of both the president and the makeup of Congress.",
+    "source_section": "TOP IDEAS",
+    "source_page": 3,
+    "question": "Why is October described as representing peak uncertainty for financial markets?",
+    "ground_truth": "October represents peak uncertainty because markets have been wrestling with the start of Federal Reserve rate cuts alongside the outcomes of the U.S. presidential election and the makeup of Congress."
+  },
+  {
+    "source_context": "High conviction in asset backed securities (ABS) and yield per unit of credit quality remains attractive. U.S. 30-year fixed mortgage rates are higher than BB Corporate yields, a rare occurrence in 25 years.",
+    "source_section": "TOP IDEAS",
+    "source_page": 16,
+    "question": "What unusual relationship between mortgage rates and corporate bond yields is highlighted in the report?",
+    "ground_truth": "U.S. 30-year fixed mortgage rates are currently higher than BB Corporate yields, an occurrence rarely seen over the past 25 years."
+  },
+  {
+    "source_context": "PE valuations have normalized at lower levels in 2024, although with volatility in the data. In contrast, public market valuations continue to rally.",
+    "source_section": "TOP IDEAS",
+    "source_page": 13,
+    "question": "Why is private equity considered to be at an attractive entry point relative to public markets in 2024?",
+    "ground_truth": "Private equity valuations normalized at lower levels in 2024, whereas public market valuations have continued to rally."
+  },
+  {
+    "source_context": "S&P 500 Sectors: Current NTM P/E vs. 10-Year High, Low, Average: Information Technology Current P/E 29.0 Energy Current P/E 12.8",
+    "source_section": "EQUITIES",
+    "source_page": 34,
+    "question": "Which S&P 500 sectors had the highest and lowest NTM P/E ratios as of September 30, 2024?",
+    "ground_truth": "Information Technology had the highest NTM P/E ratio at 29.0, while Energy had the lowest at 12.8."
+  },
+  {
+    "source_context": "Information Technology 32%",
+    "source_section": "EQUITIES",
+    "source_page": 39,
+    "question": "What was the sector weight of Information Technology in the S&P 500 as of September 30, 2024?",
+    "ground_truth": "Information Technology accounted for 32% of the S&P 500 index weight."
+  },
+  {
+    "source_context": "We expect volumes to pick up this year due to upcoming debt maturities, reinforcing these lower entry points.",
+    "source_section": "TOP IDEAS",
+    "source_page": 14,
+    "question": "What factor is expected to drive higher transaction volumes in commercial real estate during 2024?",
+    "ground_truth": "Upcoming commercial real estate debt maturities are expected to drive transaction volumes higher."
+  },
+  {
+    "source_context": "MLP YTD 2024 18.90 2023 26.56 2022 30.92 2021 40.17",
+    "source_section": "ALTERNATIVES",
+    "source_page": 47,
+    "question": "What was the YTD return for Master Limited Partnerships (MLP) through August 31, 2024?",
+    "ground_truth": "The MLP strategy generated an 18.90% YTD return."
+  },
+  {
+    "source_context": "10-Yr Treasury Current 3.79 12-Mo. Ago 4.57 Average 4.25 Minimum 3.62 Maximum 4.99",
+    "source_section": "BONDS",
+    "source_page": 20,
+    "question": "What was the current yield of the 10-Year Treasury as of September 30, 2024?",
+    "ground_truth": "The 10-Year Treasury current yield was 3.79% as of September 30, 2024."
+  },
+  {
+    "source_context": "Hedge funds are benefiting from a constructive market environment for skill-based managers. We maintain a preference for market neutral, relative value equity and macro strategies.",
+    "source_section": "TOP IDEAS",
+    "source_page": 15,
+    "question": "Which specific hedge fund strategies are preferred by the Portfolio Solutions Group?",
+    "ground_truth": "The group maintains a preference for market neutral, relative value equity, and macro hedge fund strategies."
+  },
+  {
+    "source_context": "Regions/Styles: Current NTM P/E vs. 10-Year High, Low, Average: S&P 500 Current P/E 21.6 Russell 2000 Current P/E 24.8",
+    "source_section": "EQUITIES",
+    "source_page": 33,
+    "question": "What were the Next Twelve Months (NTM) P/E valuations for the S&P 500 and Russell 2000 as of September 30, 2024?",
+    "ground_truth": "The NTM P/E valuation was 21.6 for the S&P 500 and 24.8 for the Russell 2000."
+  },
+  {
+    "source_context": "After Moving Lower April to August, Global Economic Surprise Indexes Inflected Higher Over the Last Month",
+    "source_section": "TOP IDEAS",
+    "source_page": 11,
+    "question": "How did global economic surprise indexes change from April to August 2024 versus the recent month?",
+    "ground_truth": "Global economic surprise indexes moved lower from April to August 2024, but inflected higher over the subsequent month."
+  },
+  {
+    "source_context": "30-yr. Treasury Current 4.13 1-Mo. 1.78 12-Mo. Total Return 14.14",
+    "source_section": "BONDS",
+    "source_page": 22,
+    "question": "What was the 12-month total return for the 30-Year Treasury as of September 30, 2024?",
+    "ground_truth": "The 12-month total return for the 30-Year Treasury was 14.14%."
+  },
+  {
+    "source_context": "France did bounce from the early summer malaise, but sectors were affected less by domestic politics, more by Chinese demand e.g., consumer, luxury have lagged. We think France will muddle through as we are looking to exit our exposure.",
+    "source_section": "TOP IDEAS",
+    "source_page": 4,
+    "question": "Why is the Portfolio Solutions Group looking to exit its French equity exposure?",
+    "ground_truth": "Although France bounced after summer political volatility, sectors less driven by domestic politics and more dependent on Chinese demand (like luxury and consumer) have lagged, prompting an exit."
+  },
+  {
+    "source_context": "British Pound (GBP) Spot Returns vs. USD (%) 1-Mo. 2.06 YTD 5.22 1Y 9.90",
+    "source_section": "ALTERNATIVES",
+    "source_page": 42,
+    "question": "What was the 1-year spot return of the British Pound (GBP) against the U.S. Dollar as of September 30, 2024?",
+    "ground_truth": "The British Pound generated a 9.90% 1-year spot return against the U.S. Dollar."
+  },
+  {
+    "source_context": "With the repricing of further rate cuts and downward move in longer term yields, we shifted to a more firmly UW duration position last month.",
+    "source_section": "TOP IDEAS",
+    "source_page": 15,
+    "question": "What is the team's tactical allocation view on Duration within Bonds?",
+    "ground_truth": "The team maintains a high conviction underweight stance on Duration."
+  },
+  {
+    "source_context": "The reason is that we believe 250 bps of rate cuts are already priced in for Fed policy rates to fall toward 3%.",
+    "source_section": "TOP IDEAS",
+    "source_page": 4,
+    "question": "Why does the Portfolio Solutions Group maintain an underweight stance on duration?",
+    "ground_truth": "They maintain an underweight stance because 250 bps of Fed rate cuts are already priced into markets for Fed policy rates to fall toward 3%."
+  }
+]
