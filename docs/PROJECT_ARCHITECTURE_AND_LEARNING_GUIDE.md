@@ -80,12 +80,13 @@ graph TD
     N_RET --> LEX[LexicalSearchService]
     N_RET --> STRUCT[StructuredCandidateRetriever]
     
-    DENSE --> RRF[Reciprocal Rank Fusion]
+    DENSE --> RRF[ReciprocalRankFuser]
     LEX --> RRF
     STRUCT --> RRF
     
-    RRF --> MR[MetadataReranker]
-    MR --> DIV[Diversity Filter]
+    RRF --> RERANK[Reranker Strategy: Cohere Neural / Heuristic Fallback]
+    RERANK --> COMBINE[ScoreCombiner]
+    COMBINE --> DIV[DiversityFilter]
     DIV --> CHUNKS[Final Top-K Documents]
     
     C_RET -->|Broad retrieval + Period filter| N_RET_BROAD[Normal Retrieval x20]

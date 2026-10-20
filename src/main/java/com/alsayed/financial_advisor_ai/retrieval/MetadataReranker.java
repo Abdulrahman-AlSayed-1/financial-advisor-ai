@@ -1,5 +1,7 @@
 package com.alsayed.financial_advisor_ai.retrieval;
 
+import com.alsayed.financial_advisor_ai.retrieval.rerank.RerankedDocument;
+import com.alsayed.financial_advisor_ai.retrieval.rerank.Reranker;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.document.Document;
 import org.springframework.stereotype.Component;
@@ -9,12 +11,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Reranker that uses metadata signals to improve retrieval precision.
+ * Heuristic reranker that uses metadata signals to improve retrieval precision.
  * Scores documents based on entity, metric, period, and section matching.
  */
 @Slf4j
 @Component
-public class MetadataReranker {
+public class MetadataReranker implements Reranker {
 
     private final EntityRegistry entityRegistry;
     private final QueryAnalyzer queryAnalyzer;
@@ -378,9 +380,4 @@ public class MetadataReranker {
         
         return score;
     }
-
-    /**
-     * Wrapper for document with its reranked score.
-     */
-    public record RerankedDocument(Document document, double rerankedScore) {}
 }

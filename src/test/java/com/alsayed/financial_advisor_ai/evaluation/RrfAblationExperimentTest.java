@@ -128,10 +128,10 @@ public class RrfAblationExperimentTest {
             lexDocs.forEach(l -> uniqueCandidates.putIfAbsent(l.document().getId(), l.document()));
             structDocs.forEach(s -> uniqueCandidates.putIfAbsent(s.document().getId(), s.document()));
 
-            List<MetadataReranker.RerankedDocument> reranked =
+            List<com.alsayed.financial_advisor_ai.retrieval.rerank.RerankedDocument> reranked =
                     metadataReranker.rerank(q.question(), new ArrayList<>(uniqueCandidates.values()));
             Map<String, Double> rerankScores = reranked.stream()
-                    .collect(Collectors.toMap(r -> r.document().getId(), MetadataReranker.RerankedDocument::rerankedScore, (a, b) -> Math.max(a, b)));
+                    .collect(Collectors.toMap(r -> r.document().getId(), com.alsayed.financial_advisor_ai.retrieval.rerank.RerankedDocument::rerankedScore, (a, b) -> Math.max(a, b)));
 
             allQueryCandidates.add(new RawQueryCandidates(q, denseDocs, lexDocs, structDocs, rerankScores));
         }

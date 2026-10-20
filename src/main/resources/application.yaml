@@ -102,6 +102,13 @@ app:
         enabled: true
         lexical-weight: 0.3
         vector-weight: 0.7
+      reranker:
+        provider: cohere # 'cohere' | 'heuristic'
+        cohere:
+          enabled: true
+          api-key: ${COHERE_API_KEY:}
+          url: https://api.cohere.com/v1/rerank
+          model: rerank-v3.5
 
 logging:
   level:

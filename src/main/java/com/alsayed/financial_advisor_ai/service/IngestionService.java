@@ -5,6 +5,8 @@ import com.alsayed.financial_advisor_ai.ingestion.PyMuPdfPipelineProcessor;
 import com.alsayed.financial_advisor_ai.ingestion.extractor.PdfExtractor;
 import com.alsayed.financial_advisor_ai.model.raw.RawPdfDocument;
 import com.alsayed.financial_advisor_ai.retrieval.EntityRegistry;
+
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.vectorstore.VectorStore;
@@ -26,6 +28,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class IngestionService implements CommandLineRunner {
 
     private final VectorStore vectorStore;
@@ -48,20 +51,6 @@ public class IngestionService implements CommandLineRunner {
     @Value("${app.ingestion.batch-size:50}")
     private int batchSize;
 
-    public IngestionService(
-            VectorStore vectorStore,
-            JdbcTemplate jdbcTemplate,
-            ExtractionQualityValidator qualityValidator,
-            EntityRegistry entityRegistry,
-            PdfExtractor pdfExtractor,
-            PyMuPdfPipelineProcessor pymupdfPipelineProcessor) {
-        this.vectorStore = vectorStore;
-        this.jdbcTemplate = jdbcTemplate;
-        this.qualityValidator = qualityValidator;
-        this.entityRegistry = entityRegistry;
-        this.pdfExtractor = pdfExtractor;
-        this.pymupdfPipelineProcessor = pymupdfPipelineProcessor;
-    }
 
     @Override
     public void run(String... args) throws Exception {
@@ -99,7 +88,7 @@ public class IngestionService implements CommandLineRunner {
             int emptyCount = 0;
             for (Document doc : rawChunks) {
                 String text = doc.getText();
-                if (text == null || text.trim().isEmpty() || text.isBlank()) {
+                if (text == null || text.isBlank()) {
                     emptyCount++;
                     log.warn("Skipping empty/whitespace document chunk (id: {}, metadata: {})",
                             doc.getId(), doc.getMetadata());
@@ -127,13 +116,21 @@ public class IngestionService implements CommandLineRunner {
             log.info("PyMuPDF sanitized ingestion produced {} valid chunks: {} paragraphs, {} tables, {} figures",
                     validChunks.size(), paragraphChunks, tableChunks, figureChunks);
 
-            // 2. Populate entity registry from valid chunks
+            // 2. Validate extraction quality before proceeding to embedding
+            ExtractionQualityValidator.ExtractionQualityReport qualityReport = qualityValidator.validate(validChunks);
+            if (!qualityReport.isPassed()) {
+                log.warn("Extraction quality validation FAILED (score={}/100). Halting ingestion.",
+                        qualityReport.getQualityScore());
+                return;
+            }
+
+            // 3. Populate entity registry from valid chunks
             entityRegistry.populateFromDocuments(validChunks);
             EntityRegistry.RegistryStats stats = entityRegistry.getStats();
             log.info("Entity registry stats: {} unique entities, {} total occurrences",
                     stats.uniqueEntities(), stats.totalOccurrences());
 
-            // 3. Batched Vector Store Loading
+            // 4. Batched Vector Store Loading
             int total = validChunks.size();
             log.info("Loading {} documents into PgVectorStore in batches of {}...", total, batchSize);
 
@@ -228,7 +225,7 @@ public class IngestionService implements CommandLineRunner {
      *
      * <p>For URL resources (classpath:, file:) we extract the last path segment.
      */
-    private String deriveSourceDocumentId(org.springframework.core.io.Resource resource) {
+    private String deriveSourceDocumentId(Resource resource) {
         try {
             String filename = resource.getFilename();
             if (filename != null && !filename.isBlank()) {
